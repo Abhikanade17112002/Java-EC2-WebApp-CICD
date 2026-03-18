@@ -1,1 +1,1 @@
-web: java -jar target/java-eb-app-1.0.jar
+web: java -jar java-eb-app-1.0.jar
