@@ -14,6 +14,7 @@ phases:
   build:
     commands:
       - echo Packaging the application
+      - chmod +x scripts/*.sh        # ✅ make scripts executable
       - mvn clean package
       - mv target/*.jar app.jar
 
@@ -26,4 +27,7 @@ artifacts:
     - app.jar
     - Procfile
     - appspec.yml
-    - scripts/**
+    - scripts/stop.sh          # ✅ list explicitly
+    - scripts/start.sh
+    - scripts/install.sh
+  discard-paths: no            # ✅ this preserves folder structure

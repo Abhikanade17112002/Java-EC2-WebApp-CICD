@@ -4,16 +4,14 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/app
-  - source: scripts/         # ✅ explicitly copy scripts
-    destination: /home/ec2-user/app/scripts  
 
 hooks:
   ApplicationStop:
     - location: scripts/stop.sh
-  BeforeInstall:
-    - location: scripts/cleanup.sh
+      runas: root
   AfterInstall:
     - location: scripts/install.sh
-
+      runas: root
   ApplicationStart:
     - location: scripts/start.sh
+      runas: root
