@@ -27,4 +27,4 @@ artifacts:
     - Procfile
     - appspec.yml
     - scripts/**
-  # discard-paths: yes
+  discard-paths: yes
