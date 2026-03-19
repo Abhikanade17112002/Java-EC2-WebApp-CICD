@@ -4,6 +4,8 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/app
+  - source: scripts/         # ✅ explicitly copy scripts
+    destination: /home/ec2-user/app/scripts  
 
 hooks:
   ApplicationStop:
