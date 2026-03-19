@@ -7,10 +7,10 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: stop.sh
+    - location: scripts/stop.sh
 
   AfterInstall:
-    - location: install.sh
+    - location: scripts/install.sh
 
   ApplicationStart:
-    - location: start.sh
+    - location: scripts/start.sh
