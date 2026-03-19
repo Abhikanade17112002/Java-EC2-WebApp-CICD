@@ -15,6 +15,7 @@ phases:
     commands:
       - echo Packaging the application
       - mvn clean package
+      - mv target/*.jar app.jar
 
   post_build:
     commands:
@@ -22,6 +23,8 @@ phases:
 
 artifacts:
   files:
-    - target/*.jar
+    - app.jar
     - Procfile
+    - appspec.yml
+    - scripts/**
   discard-paths: yes
